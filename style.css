@@ -1,22 +1,32 @@
+body,
+html {
+    margin: 0%;
+    padding: 0%;
+}
+
+.menu-1 {
+    border-bottom: 1px solid #C4C4C4;
+}
+
 .menu-1 ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: rgb(255, 255, 255);
-    border: 1px solid #C4C4C4;
 }
 
 .menu-1 li {
-    float: left;
     list-style: none;
 }
 
 .menu-1 li a {
-    display: inline-block;
+    display: block;
+    white-space: nowrap;
     color: #1E1E1E;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 35px 50px;
 }
 
 .menu-1 li a:hover {
@@ -37,6 +47,41 @@
     color: white;
 }
 
+.logo ul {
+    height: 94px;
+    border-right: 1px solid #C4C4C4;
+}
+
+.logo li img {
+    margin: 35px 3vw;
+}
+
+@media only screen and (max-width: 500px) {
+    .options {
+        display: none;
+    }
+}
+
+.options ul {
+    display: flex;
+    height: 94px;
+}
+
+.options li {
+    margin: auto;
+}
+
+.icons ul {
+    display: flex;
+    height: 94px;
+    border-left: 1px solid #C4C4C4;
+}
+
+.icons li {
+    padding: 10px 2vw;
+    margin: auto;
+}
+
 body {
     font-family: Lato;
     font-size: 18px;
@@ -46,7 +91,7 @@ body {
 body .slogan h1 {
     font-weight: 400;
     font-size: 36px;
-    line-height: 60px;
+    line-height: 30px;
     left: 141px;
     top: 146px;
     max-width: 100%;
@@ -54,7 +99,7 @@ body .slogan h1 {
 }
 
 body .menu-1 {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between
 }
@@ -78,7 +123,7 @@ body .container-1 {
 
 body .container-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 70px;
     text-transform: uppercase;
     color: #1E1E1E;
@@ -100,7 +145,9 @@ body .center {
 
 body .center ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+    margin: 0%;
+    padding: 0%;
     grid-column-gap: 31px;
 }
 
@@ -115,12 +162,8 @@ body .center ul {
     list-style: none;
     border: 1px solid #E5E5E5;
     text-align: center;
-    gap: 5px;
     margin: auto;
-    width: 200.31px;
     height: 194px;
-    left: 86px;
-    top: 318px;
 }
 
 .center li a {
@@ -132,52 +175,11 @@ body .center ul {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 18px;
-    line-height: 22px;
-    width: 180.06px;
-    height: 170px;
-    left: 86.93px;
-    top: 445px;
 }
 
 .center li a:hover:not(.active) {
     background-color: #555;
     color: white;
-}
-
-.logo ul {
-    width: 297px;
-    height: 94px;
-}
-
-.logo li img {
-    margin: 35px 60px;
-}
-
-.options ul {
-    display: flex;
-    width: 1300px;
-    height: 94px;
-}
-
-.options li {
-    margin: auto;
-}
-
-.options li a {
-    width: 430px;
-    height: 94px;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.icons ul {
-    display: flex;
-    width: 297px;
-    height: 94px;
-}
-
-.icons li {
-    margin: auto;
 }
 
 
